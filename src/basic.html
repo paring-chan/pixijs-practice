@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://pixijs.download/v6.0.0/pixi.js"></script>
+<body style="width: 100vw; height: 100vh; margin: 0; position: fixed">
+<script>
+    let type = 'WebGL'
+    if (!PIXI.utils.isWebGLSupported()) {
+        type = 'canvas'
+    }
+
+    const app = new PIXI.Application({resolution: devicePixelRatio, autoResize: true})
+
+    document.body.appendChild(app.view)
+
+    const resize = () => {
+        const parent = app.view.parentNode
+
+        app.renderer.resize(parent.clientWidth, parent.clientHeight)
+    }
+
+    window.addEventListener('resize', resize)
+
+    resize()
+</script>
+</body>
+</html>
