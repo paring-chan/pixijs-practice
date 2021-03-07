@@ -5,5 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "serve": "^11.3.2"
+  },
+  "scripts": {
+    "serve": "serve src"
   }
 }
