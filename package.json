@@ -2,5 +2,8 @@
   "name": "pixijs-practice",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
 }
